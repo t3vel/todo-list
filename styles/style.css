@@ -1,0 +1,88 @@
+*{
+    font-family: "Itim", cursive;
+}
+
+html, body{
+    height: 100%;
+    background-color: #6394ef;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.todo-container{
+    width: 80%;
+    height: 60%;
+    background-color: #0b1174;
+    border-radius: 20px;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    overflow-y: scroll;
+}
+
+.input-container input{
+    width: calc(100% - 80px);
+    height: 30px;
+    outline-color: white;
+}
+
+.input-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-container button{
+    background-color: red;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    border-radius: 5px;
+
+}
+
+.todo-list {
+    list-style-type: decimal;
+}
+
+
+.todo-list-item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.todo-list-item button{
+    border-radius: 3px;
+    border: none;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+/* Анімація появи */
+.todo-list-item {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.todo-list-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Анімація зникнення */
+.todo-list-item.hide {
+    opacity: 0;
+    transform: translateY(10px); /* Зміщення вниз */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
